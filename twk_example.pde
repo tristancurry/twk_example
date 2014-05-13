@@ -25,11 +25,11 @@ void draw(){
 
 
   
-  float diam = 50.0;
-  float angleIncrement = radians(1.0); //how fast to make the autpilot orbit
+  float diam = 130.0;
+  float angleIncrement = radians(1.0); //the angle you shift by each frame
   angle = angle + angleIncrement; 
   
-  float radius = 150;  //radius of path for autopilot
+  float radius = 250;  //radius of path for autopilot
   float posX; 
   float posY; //x and y coordinates for ellipse centre
   
@@ -51,8 +51,8 @@ void draw(){
   rect(0,0, width, height);
   
   //draw the connecting lines from each corner
-  strokeWeight(5);
-  stroke(255,255,0,255);
+  strokeWeight(160);
+  stroke(255,127,0,255);
   line(0,0, posX, posY);
   line(width, 0, posX, posY);
   line(0, height, posX, posY);
@@ -60,9 +60,9 @@ void draw(){
   
   //draw the little ball in the centre
   ellipseMode(CENTER);
-  fill(255,255,255,256);
-  strokeWeight(3);
-  stroke(0,0,255,255);
+  fill(255,0,0,255);
+  strokeWeight(255);
+  stroke(0,0,40,255);
   ellipse(posX,posY,diam,diam);
 
   
